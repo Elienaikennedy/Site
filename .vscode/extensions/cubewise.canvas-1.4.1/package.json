@@ -1,0 +1,37 @@
+{
+	"name": "canvas",
+	"displayName": "Canvas",
+	"description": "Canvas for TM1 directives",
+	"version": "1.4.1",
+	"publisher": "cubewise",
+	"icon": "images/logo.png",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:html"
+	],
+	"main": "./extension",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "html",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "19b08403-dc42-4f0d-a8ab-a91a8c7fd84a",
+		"publisherId": "8caccade-48b5-449c-9d80-8096d1530611",
+		"publisherDisplayName": "cubewise",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1706964614755,
+		"pinned": false,
+		"preRelease": false
+	}
+}

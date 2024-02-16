@@ -1,0 +1,43 @@
+{
+	"name": "Canvas Theme",
+	"settings": [
+	{
+		"scope": [
+			"keyword.control.canvas"
+		],
+		"settings": {
+			"foreground": "#FF5733"
+		}
+	},
+	{
+		"scope": [
+			"string.quoted.double.canvas"
+		],
+		"settings": {
+			"foreground": "#2ECC71"
+		}
+	},
+	{
+		"scope": [
+			"comment.line.number-sign.canvas"
+		],
+		"settings": {
+			"foreground": "#989493"
+		}
+	},
+	{
+		scope":[
+			"entity.name.function.canvas"
+		],
+			"settings": {
+			"foreground": "#1AA3E5"
+		}
+		scope":[
+			"entity.name.class.canvas"
+		],
+			"settings": {
+			"foreground": "#D6E927"
+		}
+	}
+  ]
+}

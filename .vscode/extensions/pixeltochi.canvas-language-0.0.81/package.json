@@ -1,0 +1,62 @@
+{
+	"main": "extension.js",
+	"name": "canvas-language",
+	"publisher": "PixelTochi",
+	"displayName": "Canvas Support",
+	"description": "Syntax highlighting & Auto-completion for Canvas.",
+	"version": "0.0.81",
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"activationEvents": [
+		"onDidReloadWindow"
+	],
+	"icon": "./themes/canvas.png",
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"theme": [
+			{
+				"label": "Canvas Theme",
+				"path": "./themes/canvas.tmTheme"
+			}
+		],
+		"languages": [
+			{
+				"id": "canvas",
+				"aliases": [],
+				"icon": {
+					"light": "themes/canvas.png",
+					"dark": "themes/canvas.png"
+				},
+				"extensions": [
+					".canvas",
+					".cav"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "canvas",
+				"scopeName": "source.canvas",
+				"path": "./syntaxes/canvas.tmLanguage.json"
+			}
+		],
+		"activationEvents": [
+			"onCommand:extension.enableTheme"
+		]
+	},
+	"__metadata": {
+		"id": "5a030ef5-de8a-4d88-9391-0f2c3fc2f865",
+		"publisherId": "51f2b3dc-abd4-403f-afe5-24a7c9794e3c",
+		"publisherDisplayName": "PixelTochi's Studio",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1706964628571,
+		"pinned": false,
+		"preRelease": false
+	}
+}

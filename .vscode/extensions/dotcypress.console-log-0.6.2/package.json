@@ -1,0 +1,56 @@
+{
+	"name": "console-log",
+	"displayName": "console-log",
+	"description": "VS Code console.log generator",
+	"version": "0.6.2",
+	"publisher": "dotcypress",
+	"engines": {
+		"vscode": "^1.16.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.generateConsoleLog"
+	],
+	"main": "./extension",
+	"icon": "console.png",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.generateConsoleLog",
+				"title": "Generate console.log"
+			}
+		],
+		"keybindings": [
+			{
+				"key": "ctrl+shift+q",
+				"command": "extension.generateConsoleLog",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.0",
+		"@types/node": "^10.0.0",
+		"eslint": "^4.6.1",
+		"mocha": "^5.1.1",
+		"typescript": "^2.5.2",
+		"vscode": "^1.1.5"
+	},
+	"__metadata": {
+		"id": "a63b93c7-6024-45ff-92b2-71a271f20537",
+		"publisherId": "11e624fc-0503-4457-8905-d3c92da43c3a",
+		"publisherDisplayName": "Vitaly Domnikov",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707480760724,
+		"pinned": false
+	}
+}
