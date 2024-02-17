@@ -35,7 +35,7 @@ const fasequiz = document.getElementById('fasequiz');
 // Função para tocar o som de pulo com volume ajustável
 function playJumpSound() {
     jumpSound.currentTime = 0; // Reinicia o som para poder tocá-lo repetidamente
-    jumpSound.volume = 0.1 ; // Ajusta o volume (0.0 a 1.0, sendo 1.0 o volume máximo)
+    jumpSound.volume = 0.2 ; // Ajusta o volume (0.0 a 1.0, sendo 1.0 o volume máximo)
     jumpSound.play();
 }
 function playBackgroundMusic() {
