@@ -1,0 +1,410 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://th.bing.com/th/id/OIG.uKFn8vTJMpvI6nJ5WB.Z?w=1024&h=1024&rs=1&pid=ImgDetMain');
+    background-size: cover;
+    background-position: center;
+    height: 130vh; /* Ocupar toda a altura da tela */
+    overflow: hidden;
+    background-size: 100%;
+    background-repeat:  no-repeat;
+    
+}
+
+
+
+nav {
+    text-align: center;
+    padding: 300px 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    border: 2px solid rgb(44, 238, 53);
+    border-radius: 4px;
+    background-color: #050403;
+    overflow: hidden;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+li a:hover {
+    color: transparent;
+}
+
+li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+li:hover a::before {
+    transform: translateY(100%);
+}
+
+li a:active {
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+    /* Estilos específicos para telas menores */
+}
+
+
+
+.gameboard {
+    display: none; /* Inicialmente oculta */
+    width: 90vw;
+    height: 70vh;
+    border: 2px solid;
+    margin: 0 auto;
+    top: 10%;
+    left: 4%;
+    position: absolute;
+    background-color: #ffffff;
+    overflow: auto;
+    overflow: hidden;
+    background-image: url('https://img.freepik.com/vetores-premium/fundo-de-montanha-de-paisagem_530756-53.jpg?size=626&ext=jpg'); /* URL do papel de parede */
+    background-size: cover; /* Ajuste a imagem de fundo para cobrir toda a gameboard */
+    background-repeat: no-repeat; /* Evite repetir a imagem de fundo */
+    background-size: 100%;
+    background-attachment: fixed; /* Mantém o papel de parede fixo */
+    background-position: center; /* Centraliza a imagem */
+   
+    
+    
+   
+    
+   
+    
+
+   
+    
+   
+}
+.gameboard2 {
+    display: none; /* Inicialmente oculta */
+    width: 90vw;
+    height: 70vh;
+    border: 2px solid;
+    margin: 0 auto;
+    top: 10%;
+    left: 4%;
+    position: absolute;
+    background-color: #ffffff;
+    overflow: auto;
+    overflow: hidden;
+    background-image: url('https://img.freepik.com/vetores-premium/fundo-de-montanha-de-paisagem_530756-53.jpg?size=626&ext=jpg'); /* URL do papel de parede */
+    background-size: cover; /* Ajuste a imagem de fundo para cobrir toda a gameboard */
+    background-repeat: no-repeat; /* Evite repetir a imagem de fundo */
+    background-size: 100%;
+    background-attachment: fixed; /* Mantém o papel de parede fixo */
+    background-position: center; /* Centraliza a imagem */
+   
+    
+    
+   
+    
+   
+    
+
+   
+    
+   
+}
+
+.score {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px; /* Reduzindo o tamanho da fonte */
+    font-weight: bold;
+    color: #ff0000;
+    background-color: transparent;
+    padding: 5px; /* Reduzindo o espaço interno */
+    border-radius: 5px;
+    margin-top: 10px; /* Reduzindo a margem superior */
+    text-align: center;
+}
+
+
+
+.macaco{
+    
+   
+    background-color: #000000; /* Cor de fundo */
+    color: rgb(42, 253, 0); /* Cor do texto */
+    padding: 1vw 2vh; /* Espaçamento interno */
+    font-size: 2vw; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mostra o cursor de apontar */
+    text-align: center;
+    border-radius: 5vw;
+    margin-top: 50vh;
+    margin-left: 39vw;
+
+    
+}
+
+.didy {
+    width: 20vw;
+    position: absolute;
+    bottom: 0;
+    left: 30vw; 
+}
+
+.dk {
+    width: 9vw;
+    position: absolute;
+    bottom: 0;
+    left: 55vw;
+  
+}
+.texto {
+    position: absolute; /* Posiciona o texto de forma absoluta em relação à gameboard2 */
+    top: 25vw; /* Ajusta a posição vertical do texto para o centro */
+    left: 30vh; /* Ajusta a posição horizontal do texto para o centro */
+    transform: translate(-50%, -50%); /* Centraliza o texto horizontal e verticalmente */
+    font-size: 5vh; /* Define o tamanho da fonte */
+    color: rgb(0, 0, 0); /* Define a cor do texto */
+}
+.texto2 {
+    position: absolute; /* Posiciona o texto de forma absoluta em relação à gameboard2 */
+    top: 5vw; /* Ajusta a posição vertical do texto para o centro */
+    left: 90vh; /* Ajusta a posição horizontal do texto para o centro */
+    transform: translate(-50%, -50%); /* Centraliza o texto horizontal e verticalmente */
+    font-size: 6vh; /* Define o tamanho da fonte */
+    color: rgb(0, 0, 0); /* Define a cor do texto */
+}
+
+.fechar5 {
+   
+    background-color: #000000; /* Cor de fundo */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    padding: 1vw 2vh; /* Espaçamento interno */
+    font-size: 1.5vw; /* Tamanho da fonte */
+    cursor: pointer; /* Mostra o cursor de apontar */
+    text-align: center;
+    margin-top:2vw;
+    margin-left: -48vw;
+   position: absolute;
+    border-radius: 4px;
+}
+
+/* Estilos para os botões da gameboard */
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.reiniciar{
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    
+}
+
+/* Estilos para as imagens */
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 6vw;
+    
+    
+    animation: pipe-animation 2.2s infinite linear;
+    
+}
+
+
+
+.mario {
+    width: 12vw;
+    position: absolute;
+    bottom: 0;
+    left: 2vw;
+
+    
+}
+.jump
+ {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        left: 100vw;
+    }
+    to {
+        left: -100px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 5.5vh;
+    }
+    40% {
+        bottom: 250px;
+    }
+   
+    
+    100% {
+        bottom: 5.5vh;
+    }
+}
+
+/* Adicione estas regras de estilo ao seu arquivo CSS */
+
+.pergunta {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin-bottom: 10vh;
+    text-align: center;
+    margin: 1vw 1vh; /* Margem externa */
+    border-radius: 10vw;
+    padding: 1vw 2vh; /* Padding para espaçamento interno */
+    border: none; /* Remova a borda */
+    
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.opcao {
+    padding: 1.5vw 2vh; /* Padding para espaçamento interno */
+    background-image: url('iamgens/brown-brick-wall-texture-wall-bricks_146714-3037.avif'); /* URL da imagem de fundo */
+    background-size: cover; /* Ajuste a imagem de fundo para cobrir todo o elemento */
+    color: rgba(255, 255, 255, 0.932); /* Cor do texto */
+    border: none; /* Remova a borda */
+    text-align: center; /* Centralize o texto */
+    text-decoration: none; /* Remova a decoração do texto */
+    display: inline-block; /* Exiba como bloco */
+    font-size: 2vw; /* Tamanho da fonte */
+    margin-left: 25vw;
+    margin-top: 3vh;
+    cursor: pointer; /* Altere o cursor ao passar por cima */
+    width:40vw; /* Largura */
+    height: 3vh; /* Altura */
+    line-height: 1.4vw; /* Centralize verticalmente o texto */
+    border-radius: 80vw;
+}
+ 
+
+
+
+.opcao:hover {
+    background-color: #000000;
+}
+
+/* Adicione ao seu arquivo CSS */
+
+.pontuacao-final {
+    margin-top: 27vh;
+    background-color: #35deebbe;
+    padding: 1vw  2vh ;
+    border-radius: 10vw;
+    text-align: center;
+    font-size: 3vw; /* Tamanho da fonte */
+}
+
+.reiniciar-btn {
+    background-color: #fd2929be; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 1vw 2vh; /* Espaçamento interno */
+    font-size: 2vw; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mostra o cursor de apontar */
+    text-align: center;
+    border-radius: 10vw;
+    margin-top: 5vh;
+    margin-left: 35vw;
+}
+
+/* Estilize o botão quando o cursor passar por cima */
+.reiniciar-btn:hover {
+    background-color: #272626f3;
+}
+
+.proxima-fase-btn{
+    background-color: #77fd29be; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 1vw 2vh; /* Espaçamento interno */
+    font-size: 2vw; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mostra o cursor de apontar */
+    text-align: center;
+    border-radius: 10vw;
+    margin-top: 5vh;
+    margin-left: 38vw;
+}
+
+#novoBotao {
+    
+    transition: transform 0.3s ease;
+    border: 2px solid rgb(44, 238, 53);
+    background-color: #050403;
+    overflow: hidden;
+    padding: 1vw 10vh;
+}
+
+#novoBotao:hover {
+    background-color: #45a049; /* Mudança de cor ao passar o mouse */
+}
+
+.textofinal {
+    position: absolute; /* Posiciona o texto de forma absoluta em relação à gameboard2 */
+    top: 5vw; /* Ajusta a posição vertical do texto para o centro */
+    left: 90vh; /* Ajusta a posição horizontal do texto para o centro */
+    transform: translate(-50%, -50%); /* Centraliza o texto horizontal e verticalmente */
+    font-size: 7vh; /* Define o tamanho da fonte */
+    color: rgb(0, 0, 0); /* Define a cor do texto */
+}
+
+.fechar6 {
+   position: absolute;
+   top: 2vw;
+   left: 5vh;
+   font-size: 3vh;
+   background-color: #000000; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 1vw 2vh; /* Espaçamento interno */
+    cursor: pointer; /* Mostra o cursor de apontar */
+}
+

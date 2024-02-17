@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Elienai Kennedy</title>
+   
+    
+</head>
+<body>
+ 
+
+<!-- Adicione esta tag <audio> ao seu corpo HTML -->
+    <audio id="backgroundMusic" loop>
+        <source src="music\01. Ground Theme.mp3" type="audio/mp3">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+
+    <!-- Adicione esta tag <audio> para o som de pulo ao seu corpo HTML -->
+<audio id="jumpSound">
+    <source src="music\8d82b5_Super_Mario_Bros_Jump_Super_Sound_Effect.mp3" type="audio/mp3">
+    Seu navegador não suporta a tag de áudio.
+</audio>
+
+<audio id="levelcompleto">
+    <source src="music\06. Level Complete.mp3" type="audio/mp3">
+    Seu navegador não suporta a tag de áudio.
+</audio>
+
+<audio id="collisionSound">
+    <source src="music\08. Lost a Life.mp3" type="audio/mp3">
+    Seu navegador não suporta a tag de áudio.
+</audio>
+
+<audio id="fasequiz">
+    <source src="music\02. Underground Theme.mp3" type="audio/mp3">
+    Seu navegador não suporta a tag de áudio.
+</audio>
+
+ 
+
+
+    
+<nav>
+    <ul>
+       
+        <li><a href="#" id="missaoBtn">JOGO NEXT NUMBER</a></li>
+      
+       
+    </ul>
+</nav>
+
+
+
+<!-- Gameboard2 -->
+<div class="gameboard2" id="gameboard2" ></div>
+
+
+
+<button id="botaoMacaco" class="macaco"onclick="hideGameboard2()">Botão Macaco</button>
+
+<img src="iamgens\Dk-gustavo2.gif" class="dk" id="dk">
+<img src="iamgens\Diddy_Kongmaicon3.gif" class="didy" id="didy">
+
+
+<div class="gameboard2" id="gameboard2" style="display: none; position: relative;">
+</div>
+<!-- Gameboard -->
+<div class="gameboard" id="gameboard">
+
+    
+    <button class="button" onclick="hideGameboard()">Fechar</button>
+    <button class="reiniciar" onclick="location.reload();">Reiniciar</button>
+    
+   
+
+    <img src="iamgens\inimigo-xuxu-2.gif" class="pipe"id="pipe">
+    <img src="iamgens\Dr-mario-rico-2.gif" class="mario"id="mario">
+    
+    
+    <div class="score">Score: 0</div>
+    </div><!-- Fechando a div com a classe gameboard -->
+    <div class="gameboard" id="gameboard" style="display: none; position: relative;">
+        
+     
+        
+ <script defer src="index.js"></script>
+
+ </div>
+</body>
+</html>
