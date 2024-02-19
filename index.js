@@ -1,7 +1,9 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const denis = document.querySelector('.denis')
 const pipePosition = (pipe.offsetLeft / window.innerWidth) * 100; // Coordenada relativa
 const marioLeft = (mario.offsetLeft / window.innerWidth) * 100; // Coordenada relativa
+
 
 
 
@@ -309,7 +311,7 @@ const loop = setInterval(() => {
 
 
     // Verifica se o score atingiu 50 e a imagem do cano ainda não foi alterada
-    if (score >= 300 && !pipe.imageChanged) {
+    if (score >= 309  && !pipe.imageChanged) {
         // Altera a imagem do cano
         pipe.src = 'iamgens/porta-do-mario-certa.gif';
         pipe.style.width = '30vh ';
@@ -328,8 +330,11 @@ const loop = setInterval(() => {
 
             mario.style.animation = 'none'; // Interrompe a animação do cano
             mario.style.bottom = `${marioPosition}px`;
+
+            
+            
         // Se o score não atingiu 500, executa a lógica de colisão
-        if (score < 300 ) {
+        if (score < 309 ) {
            
 
             mario.src = 'iamgens/game-over-certo.gif';

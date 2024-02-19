@@ -240,7 +240,12 @@ li a:active {
     
 }
 
-
+.denis{
+    width: 12vw;
+    position: absolute;
+    top: 3vw;
+    animation: pipe-animation 20s infinite linear;
+}
 
 .mario {
     width: 12vw;
@@ -256,6 +261,15 @@ li a:active {
 }
 
 @keyframes pipe-animation {
+    from {
+        left: 100vw;
+    }
+    to {
+        left: -100px;
+    }
+}
+
+@keyframes denis-animation {
     from {
         left: 100vw;
     }
