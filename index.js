@@ -31,6 +31,8 @@ const jumpSound = document.getElementById('jumpSound');
 const collisionSound = document.getElementById('collisionSound');
 const levelcompleto = document.getElementById('levelcompleto');
 const fasequiz = document.getElementById('fasequiz');
+const backgroundMusic = document.getElementById('backgroundMusic')
+const backgroundMusic2 = document.getElementById('backgroundMusic2')
 
 
 
@@ -43,12 +45,24 @@ function playJumpSound() {
 function playBackgroundMusic() {
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.play();
+    backgroundMusic.currentTime = -10;
+}
+function playBackgroundMusic2() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic2.play();
+    backgroundMusic.currentTime = -10;
 }
 
 // Função para pausar a música
 function pauseBackgroundMusic() {
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.pause();
+}
+
+function pauseBackgroundMusic2() {
+    const pauseBackgroundMusic2 = document.getElementById('backgroundMusic');
+    backgroundMusic2.pause();
+    backgroundMusic2.currentTime = -10;
 }
 
 function Fasequiz() {
@@ -148,6 +162,7 @@ resetButton.addEventListener('click', resetCount);
     document.getElementById('missaoBtn').addEventListener('click', function(event) {
     event.preventDefault();
     showGameboard2();
+    backgroundMusic2.play();
     
 });
 
@@ -158,7 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
     botaoMacaco.classList.add('macaco');
     botaoMacaco.id = 'botaoMacaco';
     gameboard2.appendChild(botaoMacaco);
-   
+    
+    
     
 });
 
@@ -168,13 +184,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Adiciona um evento de clique ao botão Macaco
     botaoMacaco.addEventListener('click', function() {
-        
+        pauseBackgroundMusic2()
         showGameboard(); // Exibe a gameboard
         playBackgroundMusic(); // Reproduz a música de fundo
         hideGameboard2(); // Esconde a gameboard2
         incrementScore(); // Inicia a contagem dos pontos
         updateScoreDisplay();
+        
+        
+
     });
+    
      // Adiciona um elemento <p> com texto dentro da gameboard2
      const texto = document.createElement('p');
      texto.classList.add("texto");
@@ -308,9 +328,36 @@ const loop = setInterval(() => {
 
     
 
+// Declare uma variável global para armazenar a URL da imagem original do cano
+let originalPipeImageSrc = 'iamgens/Boss_Lakitu_SMW3D.webp';
+
+// Dentro da função onde você altera a imagem do cano quando o score atinge 50
+if (score >= 110 && !pipe.imageChanged) {
+    // Altera a imagem do cano
+    pipe.src = 'iamgens/pipe-xuxu.gif';
+    pipe.style.width = '5vw';
+    
+    // Adapte aqui os novos comandos ou lógica necessária para o novo comportamento do cano
+    // ...
+   
+    // Marca que a imagem do cano foi alterada
+    pipe.imageChanged = true;
+}
+
+// Dentro da função onde você reverte a imagem do cano quando o score atinge 100
+if (score >= 199) {
+    // Reverte a imagem do cano para a original
+    pipe.src = originalPipeImageSrc;
+    pipe.style.width = '7vw';
+    
+    // Adapte aqui para reverter outras mudanças feitas no comportamento do cano, se houver
+
+    // Marca que a imagem do cano foi revertida para a original
+    pipe.imageChanged = false;
+}
 
 
-    // Verifica se o score atingiu 50 e a imagem do cano ainda não foi alterada
+ // Verifica se o score atingiu 50 e a imagem do cano ainda não foi alterada
     if (score >= 309  && !pipe.imageChanged) {
         // Altera a imagem do cano
         pipe.src = 'iamgens/porta-do-mario-certa.gif';
@@ -331,7 +378,7 @@ const loop = setInterval(() => {
             mario.style.animation = 'none'; // Interrompe a animação do cano
             mario.style.bottom = `${marioPosition}px`;
 
-            
+
             
         // Se o score não atingiu 500, executa a lógica de colisão
         if (score < 309 ) {
