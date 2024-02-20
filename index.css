@@ -303,6 +303,7 @@ li a:active {
     border-radius: 10vw;
     padding: 1vw 2vh; /* Padding para espaçamento interno */
     border: none; /* Remova a borda */
+    color: rgba(255, 255, 255, 0.932); /* Cor do texto */
     
 }
 
