@@ -110,7 +110,7 @@ li a:active {
     background-color: #ffffff;
     overflow: auto;
     overflow: hidden;
-    background-image: url('https://img.freepik.com/vetores-premium/fundo-de-montanha-de-paisagem_530756-53.jpg?size=626&ext=jpg'); /* URL do papel de parede */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz53fSSLy8ofuPgSyg7KESfggqSN_CYQ6tSw&usqp=CAU'); /* URL do papel de parede */
     background-size: cover; /* Ajuste a imagem de fundo para cobrir toda a gameboard */
     background-repeat: no-repeat; /* Evite repetir a imagem de fundo */
     background-size: 100%;
@@ -315,9 +315,9 @@ li a:active {
 
 .opcao {
     padding: 1.5vw 2vh; /* Padding para espaçamento interno */
-    background-image: url('iamgens/brown-brick-wall-texture-wall-bricks_146714-3037.avif'); /* URL da imagem de fundo */
+   background-color: #f2d025;
     background-size: cover; /* Ajuste a imagem de fundo para cobrir todo o elemento */
-    color: rgba(255, 255, 255, 0.932); /* Cor do texto */
+    color: rgba(0, 0, 0, 0.932); /* Cor do texto */
     border: none; /* Remova a borda */
     text-align: center; /* Centralize o texto */
     text-decoration: none; /* Remova a decoração do texto */

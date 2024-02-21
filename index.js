@@ -33,6 +33,8 @@ const levelcompleto = document.getElementById('levelcompleto');
 const fasequiz = document.getElementById('fasequiz');
 const backgroundMusic = document.getElementById('backgroundMusic')
 const backgroundMusic2 = document.getElementById('backgroundMusic2')
+const final = document.getElementById('final');
+
 
 
 
@@ -92,6 +94,15 @@ function Levelcompleto() {
     levelcompleto.play();
 }
 
+function finalplay() {
+    final.currentTime = 0; // Reinicia o som para poder tocá-lo repetidamente
+    final.volume = 1 ; // Ajusta o volume (0.0 a 1.0, sendo 1.0 o volume máximo)
+    final.play();
+}
+function finalpause() {
+    const final = document.getElementById('final');
+    final.pause();
+}
 
 
 function showGameboard() {
@@ -221,6 +232,7 @@ fechar5.classList.add('fechar5')
 // Adicionar um evento de clique ao botão
 fechar5.addEventListener('click', function() {
     hideGameboard2(); // Chama a função para esconder a gameboard2
+    pauseBackgroundMusic2()
 });
 
 // Adicionar o botão de fechar à sua gameboard2
@@ -293,7 +305,7 @@ function clearGameboard() {
         });
 
         // Redefine outros valores e elementos conforme necessário para um novo jogo
-        quadroJogo.style.backgroundImage = "url('iamgens/3b4e1643-0972-4736-a7c0-15d00c16ba9b.jpg')";
+        quadroJogo.style.backgroundImage = "url('iamgens/logo.png')";
         pipe.style.animation = 'pipeMove 2s linear infinite';
 
         // Chama a função para mostrar o quiz
@@ -441,7 +453,7 @@ let perguntasQuiz = [
         
     },
     {
-        pergunta: 'Qual das seguintes opções é uma linguagem de marcação frequentemente usada para representar e trocar dados de forma estruturada??',
+        pergunta: ' Representar e trocar informações entre sistemas e plataformas de forma legível tanto para humanos quanto para computadores?',
         opcoes: ['XML', 'Speed Contábil', 'Speed Fiscal', 'Speed Contribuição'],
         respostaCorreta: 0  // Índice da opção correta no array de opções
     },
@@ -560,7 +572,7 @@ function resetGame() {
 
 function proximaFase() {
     limparGameboard()
-
+    finalplay()
     const textfinal = document.createElement('p')
     textfinal.textContent = 'Parabéns, baixe esse arquivo abaixo e receba o seu troféu'
     textfinal.classList.add('textofinal')
@@ -577,6 +589,7 @@ function proximaFase() {
     fechar6.addEventListener('click', function() {
         hideGameboard(); // Chama a função para esconder a gameboard
         location.reload();
+        finalpause()
     });
     // Adicionar o botão de fechar à sua gameboard
 document.getElementById('gameboard').appendChild(fechar6);   
