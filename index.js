@@ -447,7 +447,7 @@ document.addEventListener('keydown', (event) => {
 
 let perguntasQuiz = [
     {
-        pergunta: 'COMPLETE O QUIZ E FAÇA 5 PONTOS',
+        pergunta: 'COMPLETE O QUIZ SOBRE OS ITENS RELATIVOS À AUDITORIA TRIBUTÁRIA E FAÇA 5 PONTOS PARA RECEBER UM PRÊMIO',
         opcoes: [ 'COMERÇAR'],
         respostaCorreta: 2  // Índice da opção correta no array de opções
         
@@ -458,18 +458,18 @@ let perguntasQuiz = [
         respostaCorreta: 0  // Índice da opção correta no array de opções
     },
     {
-        pergunta: 'Qual ferramenta é utilizada para automação e agilização dos processos fiscais em uma empresa?',
+        pergunta: 'Pode ser utilizado para gerar e validar documentos fiscais que são essenciais para a realização e comprovação de operações que envolvem a restituição de tributos',
         opcoes: ['Speed Contábil', 'Speed Fiscal', 'XML', 'Speed Contribuição'],
         respostaCorreta: 1
     },
     {
-        pergunta: 'Qual ferramenta é utilizada para simplificar e otimizar o cumprimento das obrigações fiscais relacionadas às contribuições sociais??',
+        pergunta: 'Automatizar processos relacionados à apuração, controle e pagamento das contribuições sociais, garantindo conformidade com a legislação tributária.',
         opcoes: ['Speed Contábil', 'XML', 'Speed Fiscal', 'Speed Contribuição'],
         respostaCorreta: 3
     },
     // Adicione mais perguntas abaixo
     {
-        pergunta: 'Qual ferramenta é utilizada para facilitar a escrituração contábil das empresas?',
+        pergunta: 'Automatizar e simplificar o processo de escrituração contábil, garantindo conformidade com a legislação tributária e fornecendo uma gestão eficiente das informações contábeis da empresa',
         opcoes: ['Speed Fiscal', 'Speed Contribuição', 'Speed Contábil', 'XML'],
         respostaCorreta: 2
     },
@@ -605,7 +605,7 @@ function criarLinkPDF() {
     link.textContent = 'Baixar PDF';
     
     // Define o atributo href do link como o conteúdo do arquivo PDF
-    link.href = 'https://drive.google.com/uc?export=download&id=1mtF1xcsBX1Kkl2V_RqacRasgQ8Y9abzT';
+    link.href = 'https://drive.google.com/uc?export=download&id=1TwjubTwAbottDFhpQmwJbfSSEMWmmyPV';
     
     // Define o atributo download para que o navegador baixe o arquivo quando o link for clicado
     link.download = 'TROFÉU.pdf';
