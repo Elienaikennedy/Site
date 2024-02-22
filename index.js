@@ -10,6 +10,8 @@ const marioLeft = (mario.offsetLeft / window.innerWidth) * 100; // Coordenada re
 
 
 
+
+
 let intervalId;  // Variável global para armazenar o ID do intervalo
 let score = 0;
 
@@ -137,6 +139,7 @@ function showGameboard2() {
      
     }
 
+    
 
     function resetCount() {
         // Salva o estado atual do jogo, se necessário
@@ -681,10 +684,11 @@ function verificarResposta(indiceOpcaoSelecionada) {
     }
 }
 
-// Limpa os dados do armazenamento local ao fechar a página
 window.addEventListener('unload', function() {
-    localStorage.clear();
+    // Verifica se a reinicialização do jogo não está ocorrendo
+    if (!reiniciandoJogo) {
+        localStorage.clear();
+    }
 });
-
 
 
