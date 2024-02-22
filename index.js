@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
      const texto2 = document.createElement('p');
      texto2.classList.add("texto2");
-     texto2.textContent = 'Bem vindo ao JOGO, chegue na proxima Fase.';
+     texto2.textContent = 'Bem vindo ao JOGO, faça 300 pontos para chegar na proxima Fase.';
      gameboard2.appendChild(texto2);
 
 
