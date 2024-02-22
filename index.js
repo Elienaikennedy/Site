@@ -684,11 +684,20 @@ function verificarResposta(indiceOpcaoSelecionada) {
     }
 }
 
-window.addEventListener('unload', function() {
+let reiniciandoJogo = false;
+
+// Adicione um listener para o evento 'beforeunload'
+window.addEventListener('beforeunload', function(event) {
     // Verifica se a reinicialização do jogo não está ocorrendo
     if (!reiniciandoJogo) {
         localStorage.clear();
     }
 });
 
+// Função para reiniciar o jogo
+function reiniciarJogo() {
+    reiniciandoJogo = true;
+    // Adicione aqui a lógica para reiniciar o jogo
+    reiniciandoJogo = false; // Defina de volta para false após reiniciar o jogo
+}
 
