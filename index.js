@@ -661,6 +661,10 @@ function verificarResposta(indiceOpcaoSelecionada) {
     }
 }
 
+// Limpa os dados do armazenamento local ao fechar a página
+window.addEventListener('unload', function() {
+    localStorage.clear();
+});
 
 
 
