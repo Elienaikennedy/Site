@@ -345,30 +345,34 @@ const loop = setInterval(() => {
 // Declare uma variável global para armazenar a URL da imagem original do cano
 let originalPipeImageSrc = 'iamgens/Boss_Lakitu_SMW3D.webp';
 
-// Dentro da função onde você altera a imagem do cano quando o score atinge 50
-if (score >= 110 && !pipe.imageChanged) {
-    // Altera a imagem do cano
-    pipe.src = 'iamgens/pipe-xuxu.gif';
-    pipe.style.width = '5vw';
-    
-    // Adapte aqui os novos comandos ou lógica necessária para o novo comportamento do cano
-    // ...
-   
-    // Marca que a imagem do cano foi alterada
-    pipe.imageChanged = true;
+// Dentro do loop principal onde você verifica a posição do cano
+if (pipePosition <= 0) {
+    // O cano saiu completamente da tela
+    if (score >= 110 && !pipe.imageChanged) {
+        // Altera a imagem do cano
+        pipe.src = 'iamgens/pipe-xuxu.gif';
+        pipe.style.width = '5vw';
+        
+        // Adapte aqui os novos comandos ou lógica necessária para o novo comportamento do cano
+        // ...
+       
+        // Marca que a imagem do cano foi alterada
+        pipe.imageChanged = true;
+    }
+
+    // Dentro da função onde você reverte a imagem do cano quando o score atinge 100
+    if (score >= 199) {
+        // Reverte a imagem do cano para a original
+        pipe.src = originalPipeImageSrc;
+        pipe.style.width = '7vw';
+        
+        // Adapte aqui para reverter outras mudanças feitas no comportamento do cano, se houver
+
+        // Marca que a imagem do cano foi revertida para a original
+        pipe.imageChanged = false;
+    }
 }
 
-// Dentro da função onde você reverte a imagem do cano quando o score atinge 100
-if (score >= 199) {
-    // Reverte a imagem do cano para a original
-    pipe.src = originalPipeImageSrc;
-    pipe.style.width = '7vw';
-    
-    // Adapte aqui para reverter outras mudanças feitas no comportamento do cano, se houver
-
-    // Marca que a imagem do cano foi revertida para a original
-    pipe.imageChanged = false;
-}
 
 
  // Verifica se o score atingiu 50 e a imagem do cano ainda não foi alterada
