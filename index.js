@@ -195,12 +195,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Adiciona um evento de clique ao botão Macaco
     botaoMacaco.addEventListener('click', function() {
-        pauseBackgroundMusic2()
+        
         showGameboard(); // Exibe a gameboard
         playBackgroundMusic(); // Reproduz a música de fundo
+        pauseBackgroundMusic2()
         hideGameboard2(); // Esconde a gameboard2
         incrementScore(); // Inicia a contagem dos pontos
         updateScoreDisplay();
+        
         
         
 
