@@ -180,7 +180,7 @@ li a:active {
     left: 30vh; /* Ajusta a posição horizontal do texto para o centro */
     transform: translate(-50%, -50%); /* Centraliza o texto horizontal e verticalmente */
     font-size: 5vh; /* Define o tamanho da fonte */
-    color: rgb(0, 0, 0); /* Define a cor do texto */
+    color: rgb(55, 0, 255); /* Define a cor do texto */
 }
 .texto2 {
     position: absolute; /* Posiciona o texto de forma absoluta em relação à gameboard2 */

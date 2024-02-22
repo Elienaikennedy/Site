@@ -214,10 +214,26 @@ document.addEventListener('DOMContentLoaded', function () {
      texto.textContent = 'Aperte (espaço) para pular ';
      gameboard2.appendChild(texto);
 
-     const texto2 = document.createElement('p');
-     texto2.classList.add("texto2");
-     texto2.textContent = 'Bem vindo ao JOGO, faça 300 pontos para chegar na proxima Fase.';
-     gameboard2.appendChild(texto2);
+     
+
+   // Cria um elemento de parágrafo <p>
+const texto2 = document.createElement('p');
+texto2.classList.add("texto2");
+texto2.textContent = "Bem vindo ao JOGO, faça ";
+
+// Cria um elemento <span> para destacar o número "300"
+const pontuacaoSpan = document.createElement('span');
+pontuacaoSpan.textContent = '300';
+pontuacaoSpan.style.color = 'red'; // Define a cor vermelha para o texto
+
+// Adiciona o elemento <span> ao elemento de parágrafo
+texto2.appendChild(pontuacaoSpan); // Adiciona o <span> ao final do texto
+
+// Continua adicionando o restante do texto
+texto2.appendChild(document.createTextNode(" pontos para chegar na próxima Fase."));
+
+// Adiciona o parágrafo completo ao elemento gameboard2
+gameboard2.appendChild(texto2);
 
 
      const didy = document.querySelector('.didy');
